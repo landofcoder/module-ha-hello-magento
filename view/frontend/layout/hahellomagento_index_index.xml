@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <block class="Lof\HaHelloMagento\Block\Index" name="hahellomagento_index_index" template="Lof_HaHelloMagento::index.phtml">
+            <block class="Magento\Framework\View\Element\Template" name="hello_child_block" template="Lof_HaHelloMagento::html/child.phtml"/>
+        </block>
+    </referenceContainer>
+    <referenceContainer name="sidebar.main">
+        <block class="Magento\Framework\View\Element\Template" name="hello_child2_block"  template="Lof_HaHelloMagento::html/child2.phtml"/>
+    </referenceContainer>
+</page>
