@@ -4,8 +4,5 @@
         <route id="hahellomagento" frontName="hahellomagento">
             <module name="Lof_HaHelloMagento" />
         </route>
-        <route id="customer">
-           <module name="Lof_HaHelloMagento" before="Magento_Customer" />
-       </route>
     </router>
 </config>
