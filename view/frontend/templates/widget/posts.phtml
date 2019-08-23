@@ -1,4 +1,8 @@
 <?php if($block->getData('posts')): ?>
 	<h2 class='posts'><?php echo $block->getData('posts'); ?></h2>
-	<p>This is sample widget. Perform your code here.</p>
-<?php endif; ?>
+	<p class='content'><?php echo $block->getData('content'); ?></p>
+	<?php if($block->getData('enable_author') == 1){
+	?>
+	<p>Author: <?php echo $block->getData('author') ?></p>
+	<?php }
+	endif; ?>

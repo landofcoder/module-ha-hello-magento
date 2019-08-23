@@ -5,7 +5,19 @@
 		<description>Posts</description>
 		<parameters>
 			<parameter name="posts" sort_order="10" visible="true" xsi:type="text">
-				<label>Custom Posts Label</label>
+				<label>Title</label>
+			</parameter>
+			<parameter name="content" sort_order="10" visible="true" xsi:type="text">
+				<label>Content</label>
+			</parameter>
+			<parameter name="enable_author" sort_order="10" visible="true" xsi:type="select" source_model="Magento\Config\Model\Config\Source\Yesno">
+				<label>Enable/Disable</label>
+			</parameter>
+			<parameter name="author" sort_order="10" visible="true" xsi:type="text">
+				<label>Author</label>
+				<depends>
+					<parameter name = "enable_author" value = "1"/>
+				</depends>
 			</parameter>
 		</parameters>
 	</widget>

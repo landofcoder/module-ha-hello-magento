@@ -14,15 +14,13 @@ class Index extends \Magento\Framework\App\Action\Action
 		$this->helperData = $helperData;
 		return parent::__construct($context);
 	}
-	// public function gettext(){
-	// 	return $this->helperData->getGeneralConfig('display_text');
-	// }
 	 public function execute(){
 		if($this->helperData->getGeneralConfig('enable') == 1){
 		?>
 		<head>
 			<title><?php echo $this->helperData->getGeneralConfig('title');?></title>	
-		</head>		<?php
+		</head>		
+		<?php
 		}
 		return $this->_pageFactory->create();		
 	 }

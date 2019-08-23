@@ -16,8 +16,10 @@ class Router implements \Magento\Framework\App\RouterInterface
    }
    public function match(\Magento\Framework\App\RequestInterface $request)
    {
-       $identifier = trim($request->getPathInfo(), '/');
-       $url = $this->helperData->getGeneralConfig('textrouter');
+        $identifier = trim($request->getPathInfo(), '/');
+        if($this->helperData->getGeneralConfig('enable') == 1){
+            $url = $this->helperData->getGeneralConfig('textrouter');
+        }
        if(strpos($identifier, $url) !== false) {
             $request->setModuleName('hahellomagento')-> //module name
             setControllerName('index')-> //controller name
